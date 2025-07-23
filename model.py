@@ -1,44 +1,5 @@
 import logging 
 from dataclasses import dataclass 
-# Recall:
-"""
-A dataclass in Python is a decorator (@dataclass) 
-that automatically generates special methods for a class, 
-such as:
-
-__init__() - initializer
-__repr__() - string representation
-__eq__() - equality comparison
-__hash__() - hashable for dictionaries/sets (optional)
-It's used when a class is primarily meant to store data, 
-like a configuration or structured input.
-
-
-Ex.
-
-from dataclasses import dataclass
-
-@dataclass
-class Point:
-    x: int
-    y: int
-
-
-This is equivalent to manually writing:
-    
-class Point:
-    def __init__(self, x: int, y: int):
-        self.x = x
-        self.y = y
-
-
-defines a configuration container that 
-holds all the hyperparameters and metadata 
-needed by the Chronos framework — specifically, 
-the tokenizer and model.
-
-"""
-
 from typing import Any, Dict, List, \
                 Literal, Optional, Tuple, Union
 
@@ -55,10 +16,6 @@ from transformers import (
 )
 
 import model 
-
-import chronos 
-from chronos.base import BaseChronosPipeline, ForecastType
-# from chronos.utils import left_pad_and_stack_1D
 
 
 
